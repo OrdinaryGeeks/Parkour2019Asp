@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link rel="shortcut icon" href="~/Content/Build/favicon.ico" />
+
+<script src="~/Content/Build/UnityProgress.js"></script>
+<script src="~/Content/Build/UnityLoader.js"></script>
+<link href="~/Content/Build/style.css" rel="stylesheet" />
+<script>
+    var unityInstance = UnityLoader.instantiate("unityContainer", "Parkolor2019/Content/Build/P2019WebGL.json", { onProgress: UnityProgress });
+
+/**/</script>
+
+
+<div class="webgl-content">
+    <div id="unityContainer" style="width: 960px; height: 600px"></div>
+    <div class="footer">
+        <div class="webgl-logo"></div>
+        <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
+        <div class="title">Parkour2019</div>
+    </div>
+</div>
